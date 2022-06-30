@@ -61,6 +61,7 @@ export default class TodoPanel {
             e => {
                 if (this._panel.visible) {
                     this._update();
+                    this.getListData()
                 }
             },
             null,
