@@ -11,15 +11,15 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:todo-app.login",
+		"onCommand:todo-app.signin",
 		"onCommand:todo-app.open"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "todo-app.login",
-				"title": "TODO-App.login"
+				"command": "todo-app.signin",
+				"title": "TODO-App.signin"
 			},
 			{
 				"command": "todo-app.open",
@@ -29,7 +29,7 @@
 		"menus": {
 			"editor/context": [
 				{
-					"command": "todo-app.login",
+					"command": "todo-app.signin",
 					"group": "todo1"
 				},
 				{
@@ -39,7 +39,7 @@
 			],
 			"editor/title": [
 				{
-					"command": "todo-app.login",
+					"command": "todo-app.signin",
 					"group": "navigation"
 				},
 				{

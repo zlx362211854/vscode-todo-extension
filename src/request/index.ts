@@ -34,6 +34,14 @@ export const login = (params: { username: string, password: string }) => {
         data: { username: params.username, password: encryptedPassword },
     })
 }
+export const signin = (params: { username: string, password: string }) => {
+    const encryptedPassword = Crypto.AES.encrypt(params.password, secretKey).toString();
+    return req.request<any, Response>({
+        url: '/user/signin',
+        method: 'POST',
+        data: { username: params.username, password: encryptedPassword },
+    })
+}
 
 export const getList = () => {
     const authToken = store.getItem('auth-token')

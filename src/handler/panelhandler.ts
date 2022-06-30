@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import TodoPanel from '../panel';
 import store from '../store';
-import { handleLogin, loginHandler } from './loginHandler';
+import { handleLogin } from './loginHandler';
 export const panelHandler = (context: vscode.ExtensionContext) => async () => {
     const authToken = store.getItem('auth-token')
     if (!authToken) {
