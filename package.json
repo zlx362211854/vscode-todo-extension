@@ -2,7 +2,7 @@
 	"name": "todo-app",
 	"displayName": "todo-app",
 	"description": "a tool to manage TODO list in vscode",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "linkZhao00",
 	"engines": {
 		"vscode": "^1.68.0"
