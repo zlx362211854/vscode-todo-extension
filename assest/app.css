@@ -1,0 +1,26 @@
+body {
+    background-color: #e5e5e5;
+    margin: 0;
+    font-family: monospace
+}
+
+input,
+button {
+    font-family: monospace
+}
+
+.material-icons {
+    font-size: 18px
+}
+
+.done {
+    color: #8ecd8a
+}
+
+.todo {
+    color: #333
+}
+
+.danger {
+    color: #c84646d4
+}
