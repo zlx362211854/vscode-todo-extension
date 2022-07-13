@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { login, signin } from '../request';
 import store from '../store';
+import { startAuthInterval } from '../util';
 const validateName = (name: string) => {
     if (!name) {
         return 'username is required!'
@@ -62,7 +63,8 @@ export const handleLogin = async () => {
         if (res.data?.code === 200) {
             vscode.window.showInformationMessage('Login successful!')
             store.setItem('auth-token', res.data?.result?.accessToken)
-            store.setItem('userinfo', { username: res.data?.result?.name, userId: res.data?.result?.id })
+            store.setItem('userinfo', { username: params.username, password: params.password, userId: res.data?.result?.id })
+            startAuthInterval()
             resolve(true)
         }
     })

@@ -1,3 +1,4 @@
+[toc]
 # todo-app
 todo-app is a vscode extension that allows you to quickly manage your todo list tasks in vscode
 
