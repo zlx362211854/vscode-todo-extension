@@ -15,7 +15,7 @@ export const panelHandler = (context: vscode.ExtensionContext) => async () => {
     }
 }
 
-const handlePanelOpen = (context: vscode.ExtensionContext) => {
+export const handlePanelOpen = (context: vscode.ExtensionContext) => {
     TodoPanel.createOrShow(context.extensionUri);
     TodoPanel.currentPanel?.getListData()
 }

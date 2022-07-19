@@ -14,6 +14,10 @@ todo-app is a vscode extension that allows you to quickly manage your todo list 
 3. Right-click and select the `open` command to log in and open the app
    ![](https://i.bmp.ovh/imgs/2022/06/30/a99c2a9982c67f60.png)
 
+4. select some code and right click to add a new todo task
+![](https://i.bmp.ovh/imgs/2022/07/19/63021770f9e0982f.png)
+5. click the link to open file in vscode
+   ![](https://i.bmp.ovh/imgs/2022/07/19/eec3fbf9248e4037.png)
 
 ## preview
 

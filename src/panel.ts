@@ -1,5 +1,6 @@
 import path = require('path');
 import * as vscode from 'vscode';
+import { Note, openfileHandler } from './handler/addtodoHandler';
 import { addData, deleteData, getList, updateData } from './request';
 import { html } from './template';
 function getWebviewOptions(extensionUri: vscode.Uri): vscode.WebviewOptions {
@@ -92,6 +93,9 @@ export default class TodoPanel {
                 case 'remove':
                     this.deleteData(message.data)
                     break;
+                case 'openfile':
+                    this.openfile(message.data)
+                    break;
             }
         });
     }
@@ -156,11 +160,20 @@ export default class TodoPanel {
     }
 
     public async deleteData(item: any) {
-        console.log('item ddddd: ', item);
         if (!item.id) return null
         const { data } = await deleteData(item.id)
         if (data.code === 200) {
             this.getListData()
+        }
+    }
+
+    public async openfile(info: string) {
+        try {
+            const infoObject: Note = JSON.parse(info)
+            openfileHandler(infoObject)
+        } catch (err) {
+            console.log(err)
+            // vscode.window.showErrorMessage(err)
         }
     }
 }

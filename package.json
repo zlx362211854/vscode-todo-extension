@@ -2,7 +2,7 @@
 	"name": "todo-app",
 	"displayName": "todo-app",
 	"description": "a tool to manage TODO list in vscode",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"publisher": "linkZhao00",
 	"engines": {
 		"vscode": "^1.68.0"
@@ -12,7 +12,8 @@
 	],
 	"activationEvents": [
 		"onCommand:todo-app.signin",
-		"onCommand:todo-app.open"
+		"onCommand:todo-app.open",
+		"onCommand:todo-app.add-todo"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -24,6 +25,10 @@
 			{
 				"command": "todo-app.open",
 				"title": "TODO-App.open"
+			},
+			{
+				"command": "todo-app.add-todo",
+				"title": "TODO-App.add-todo"
 			}
 		],
 		"menus": {
@@ -34,6 +39,10 @@
 				},
 				{
 					"command": "todo-app.open",
+					"group": "todo1"
+				},
+				{
+					"command": "todo-app.add-todo",
 					"group": "todo1"
 				}
 			],
